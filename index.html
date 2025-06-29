@@ -10,9 +10,11 @@
       margin: 0;
       font-family: 'Open Sans', sans-serif;
       color: #333;
-      background-color: #f9f9f9;    }    header {
+      background-color: #f9f9f9;
+    }
+    header {
       background: linear-gradient(to right, #e0f2f1, #f1f8f6);
-      padding: 1rem 2.5rem;
+      padding: 0.5rem 2.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -20,8 +22,9 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }    header img {
-      height: 140px;
+    }
+    header img {
+      height: 100px;
       display: block;
       margin-right: 1rem;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
@@ -33,14 +36,15 @@
     nav {
       display: flex;
       align-items: center;
-    }    nav a {
-      margin-left: 2rem;
+    }
+    nav a {
+      margin-left: 1.8rem;
       text-decoration: none;
       color: #00796b;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1rem;
       position: relative;
-      padding: 0.5rem 0;
+      padding: 0.3rem 0;
       transition: color 0.3s ease;
     }
     nav a:after {
@@ -98,6 +102,58 @@
       font-family: 'Playfair Display', serif;
       color: #004d40;
     }
+    .qualifications {
+      background-color: #f7fbfa;
+      border-left: 3px solid #80cbc4;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .qualifications h3 {
+      font-family: 'Playfair Display', serif;
+      color: #00796b;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    .qualifications ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+    }    .qualifications li {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    .profile-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #e0f2f1;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .profile-image:hover {
+      transform: scale(1.02);
+      border-color: #80cbc4;
+    }
+    .profile-text {
+      flex: 1;
+    }
+    @media (max-width: 768px) {
+      .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .profile-image {
+        margin-bottom: 1.5rem;
+      }
+    }
     .services ul {
       list-style: none;
       padding: 0;
@@ -121,7 +177,8 @@
     }
   </style>
 </head>
-<body>  <header>
+<body>
+  <header>
     <img src="images/logo-transparent-png.png" alt="Mindful Journey Logo">
     <nav>
       <a href="#services">Services</a>
@@ -133,7 +190,7 @@
 
   <section class="hero">
     <h1>Mindful Journey Psychology</h1>
-    <p>Helping you grow through what you’re going through.</p>
+    <p>Helping you grow through what you're going through.</p>
     <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book an Appointment</button>
   </section>
 
@@ -148,24 +205,39 @@
       <li>Addiction & Recovery</li>
     </ul>
   </section>
-
   <section id="about" class="bio">
     <h2>Meet Your Psychologist</h2>
-    <p>I am a generally registered psychologist with experience supporting individuals across the lifespan — from young children to adults. Throughout my career, I’ve worked with a wide range of mental health presentations including anxiety, depression, PTSD, addiction, anger management, personality challenges, domestic violence and individuals involved in the forensic system.</p>
-    <p>I have a strong interest in human behaviour and am passionate about helping people grow through what they’re going through. I use evidence-based practices and a person-centred approach that respects each individual’s unique journey.</p>
+    
+    <div class="profile-container">
+      <img src="images/profile.jpg" alt="Psychologist Portrait" class="profile-image">
+      <div class="profile-text">
+        <p>I am a generally registered psychologist with experience supporting individuals across the lifespan — from young children to adults. Throughout my career, I've worked with a wide range of mental health presentations including anxiety, depression, PTSD, addiction, anger management, personality challenges, domestic violence and individuals involved in the forensic system.</p>
+      </div>
+    </div>
+    
+    <div class="qualifications">
+      <h3>Qualifications</h3>
+      <ul>
+        <li>Bachelor of Psychological Science (Honours), University of Queensland</li>
+        <li>Graduate Certificate in Addiction Studies for Health Professionals, University of Tasmania</li>
+      </ul>
+    </div>
+    
+    <p>I have a strong interest in human behaviour and am passionate about helping people grow through what they're going through. I use evidence-based practices and a person-centred approach that respects each individual's unique journey.</p>
     <p>Specialising in children aged 5+, I support challenges like ASD, ADHD, emotional regulation, trauma, school refusal, and bullying. I also work with expectant mothers and families of young children in the perinatal stage.</p>
   </section>
 
   <section id="booking" class="booking">
     <h2>Book a Session</h2>
     <p>In-person and telehealth appointments are available. After-hours and weekend sessions on request.</p>
+    <p><strong>Address:</strong> 4/12 Discovery Drive, North Lakes QLD 4509</p>
     <p><strong>Phone:</strong> 0481 578 624</p>
     <p><strong>Email:</strong> info@mindfuljourneypsychology.com.au</p>
     <button onclick="window.location.href='mailto:info@mindfuljourneypsychology.com.au'">Email to Book</button>
   </section>
 
   <footer id="contact">
-    <p>&copy; Mindful Journey Psychology</p>
+    <p>&copy; Mindful Journey Psychology | 4/12 Discovery Drive, North Lakes QLD 4509 | ABN: 76 226 164 700</p>
   </footer>
 </body>
 </html>
