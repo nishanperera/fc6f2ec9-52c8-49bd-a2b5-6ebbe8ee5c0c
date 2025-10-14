@@ -1,0 +1,268 @@
+/* Shared styles for Mindful Journey Psychology site */
+
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Layout */
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header & Nav */
+header {
+  background: linear-gradient(to right, #e0f2f1, #f1f8f6);
+  padding: 0.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+header img {
+  height: 100px;
+  display: block;
+  margin-right: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.02);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 1.8rem;
+  text-decoration: none;
+  color: #00796b;
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+}
+
+nav a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #004d40;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #004d40;
+}
+
+nav a:hover:after {
+  width: 100%;
+}
+
+.social-icon {
+  margin-left: 1rem;
+  color: #1877f2;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #145dbf;
+  transform: scale(1.1);
+}
+
+/* Hero (index) */
+.hero {
+  background: #f1f8f6;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background: #80cbc4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cards/Containers */
+.services, .bio, .content {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #004d40;
+}
+
+/* Policy page heading specifics */
+.content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+p, li {
+  line-height: 1.6;
+}
+
+/* Qualifications block (index) */
+.qualifications {
+  background-color: #f7fbfa;
+  border-left: 3px solid #80cbc4;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.qualifications h3 {
+  font-family: 'Playfair Display', serif;
+  color: #00796b;
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.qualifications ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.qualifications li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Profile (index) */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e0f2f1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+  border-color: #80cbc4;
+}
+
+.profile-text { flex: 1; }
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-image { margin-bottom: 1.5rem; }
+}
+
+/* Services grid (index) */
+.services ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.services li {
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Booking (index) */
+.booking { text-align: center; }
+
+/* Booking links */
+.booking a { color: #00796b; text-decoration: none; }
+.booking a:hover { color: #004d40; }
+
+/* Footer */
+footer {
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255,255,255,0.5);
+}
+
+footer a:hover { border-bottom: 1px solid white; }
+
+/* Verification badge */
+footer .sx-verified-seal {
+  display: inline-block;
+  float: none !important;
+  margin: 0.75rem auto 0;
+}
+
+/* Meta */
+.last-updated {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
