@@ -1,9 +1,54 @@
+<?php require_once( 'couch/cms.php' ); ?>
+<cms:template title='Home Page' clonable='0'>
+  
+  <cms:editable name='page_title' label='Page Title' type='text'>
+    Mindful Journey Psychology | Psychologist in North Lakes | Telehealth
+  </cms:editable>
+  
+  <cms:editable name='hero_heading' label='Hero Heading' type='text'>
+    Mindful Journey Psychology - North Lakes
+  </cms:editable>
+  
+  <cms:editable name='hero_subtext' label='Hero Subtext' type='textarea'>
+    Professional Psychology and Therapy Services in North Lakes, QLD
+  </cms:editable>
+  
+  <cms:editable name='services_intro' label='Services Introduction' type='richtext'>
+    Our North Lakes psychology practice offers evidence-based therapy for a range of mental health needs:
+  </cms:editable>
+  
+  <cms:editable name='about_intro' label='About Introduction' type='richtext'>
+    I am Dilini perera, registered psychologist in North lakes; QLD 4509.
+  </cms:editable>
+  
+  <cms:editable name='about_paragraph1' label='About Paragraph 1' type='richtext'>
+    As a registered psychologist based in North Lakes, I provide professional psychological services to individuals across the lifespan — from young children to adults. My practice offers both in-person sessions at our North Lakes clinic and <strong>Telehealth options</strong> for greater convenience.
+  </cms:editable>
+  
+  <cms:editable name='about_paragraph2' label='About Paragraph 2' type='richtext'>
+    Throughout my career, I've worked with diverse mental health presentations including anxiety, depression, PTSD, addiction, anger management, personality challenges, domestic violence and individuals involved in the forensic system.
+  </cms:editable>
+  
+  <cms:editable name='contact_phone' label='Phone Number' type='text'>
+    0481 578 624
+  </cms:editable>
+  
+  <cms:editable name='contact_email' label='Email' type='text'>
+    info@mindfuljourneypsychology.com.au
+  </cms:editable>
+  
+  <cms:editable name='contact_address' label='Address' type='text'>
+    Suite 505, 6 North Lakes Drive, North Lakes QLD 4509
+  </cms:editable>
+  
+</cms:template>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mindful Journey Psychology | Psychologist in North Lakes | Telehealth</title>
+  <title><cms:show page_title /></title>
   <meta name="description" content="Licensed psychologist in North Lakes, QLD offering therapy services for children and adults. Work cover approved with Telehealth options available.">
   <meta name="keywords" content="Psychologist, therapy, Neurodevelopmental, Work cover, Psychology, North lakes, Telehealth">
   <meta name="author" content="Mindful Journey Psychology">
@@ -24,14 +69,14 @@
     </nav>
   </header>
   <section class="hero">
-    <h1>Mindful Journey Psychology - North Lakes</h1>
-    <p>Professional Psychology and Therapy Services in North Lakes, QLD</p>
+    <h1><cms:show hero_heading /></h1>
+    <p><cms:show hero_subtext /></p>
     <p>Work Cover Approved | Telehealth Available</p>
     <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book an Appointment</button>
   </section>
   <section id="services" class="services">
     <h2>Psychological Services in North Lakes</h2>
-    <p>Our North Lakes psychology practice offers evidence-based therapy for a range of mental health needs:</p>
+    <cms:show services_intro />
     <ul>
       <li><strong>Anxiety & Depression Therapy</strong> - Comprehensive psychological support</li>
       <li><strong>PTSD & Trauma Treatment</strong> - Evidence-based therapeutic approaches</li>
@@ -47,9 +92,9 @@
     
     <div class="profile-container">
       <img src="images/profile.jpg" alt="North Lakes Psychologist Portrait" class="profile-image">      <div class="profile-text">
-        <p>I am Dilini perera, registered psychologist in North lakes; QLD 4509.</p>
-        <p>As a registered psychologist based in North Lakes, I provide professional psychological services to individuals across the lifespan — from young children to adults. My practice offers both in-person sessions at our North Lakes clinic and <strong>Telehealth options</strong> for greater convenience.</p>
-        <p>Throughout my career, I've worked with diverse mental health presentations including anxiety, depression, PTSD, addiction, anger management, personality challenges, domestic violence and individuals involved in the forensic system.</p>
+        <cms:show about_intro />
+        <cms:show about_paragraph1 />
+        <cms:show about_paragraph2 />
       </div>
     </div>
     
@@ -70,15 +115,15 @@
     <h2>Book a Psychology Session in North Lakes or via Telehealth</h2>
     <p>In-person appointments at our North Lakes clinic and <strong>Telehealth sessions</strong> are available. After-hours and weekend appointments on request.</p>
     <p>We accept a range of payment options.</p>
-    <p><strong>Address:</strong> Suite 505, 6 North Lakes Drive, North Lakes QLD 4509</p>
-    <p><strong>Phone:</strong> 0481 578 624</p>
-    <p><strong>Email:</strong> info@mindfuljourneypsychology.com.au</p>
+    <p><strong>Address:</strong> <cms:show contact_address /></p>
+    <p><strong>Phone:</strong> <cms:show contact_phone /></p>
+    <p><strong>Email:</strong> <cms:show contact_email /></p>
     <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61578217200492" target="_blank">Follow us on Facebook</a></p>
-    <button onclick="window.location.href='mailto:info@mindfuljourneypsychology.com.au'">Email to Book</button>
+    <button onclick="window.location.href='mailto:<cms:show contact_email />'">Email to Book</button>
   </section>  <footer id="contact">
     <p>&copy; Mindful Journey Psychology | 4/12 Discovery Drive, North Lakes QLD 4509 | ABN: 76 226 164 700</p>
     <p>Registered Psychologist | Work Cover Approved | Telehealth Available</p>
-    <p><a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a> | <a href="https://www.facebook.com/profile.php?id=61578217200492" target="_blank">Facebook</a></p>
+    <p><a href="index.php">Home</a> | <a href="privacy.php">Privacy Policy</a> | <a href="terms.php">Terms & Conditions</a> | <a href="https://www.facebook.com/profile.php?id=61578217200492" target="_blank">Facebook</a></p>
     <p>
   <!-- Professional verification provided by Psychology Today -->
   <a href="https://www.psychologytoday.com/profile/1562467" class="sx-verified-seal"></a>
@@ -88,3 +133,4 @@
   </footer>
 </body>
 </html>
+<?php COUCH::invoke(); ?>
