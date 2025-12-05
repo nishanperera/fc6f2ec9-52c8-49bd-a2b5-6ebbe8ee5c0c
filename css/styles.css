@@ -227,6 +227,129 @@ p, li {
   border-radius: 5px;
 }
 
+/* Fees Section */
+.fees {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.pricing-card {
+  background: linear-gradient(135deg, #e0f7fa 0%, #f1f8f6 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 2px solid #80cbc4;
+}
+
+.pricing-header {
+  border-bottom: 2px solid #80cbc4;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #004d40;
+}
+
+.session-duration {
+  font-size: 1rem;
+  color: #00796b;
+  font-weight: 600;
+  margin: 0;
+}
+
+.pricing-details {
+  margin-bottom: 1.5rem;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(128, 203, 196, 0.3);
+}
+
+.fee-row:last-child {
+  border-bottom: none;
+}
+
+.fee-row.total {
+  padding-top: 1rem;
+  border-top: 2px solid #80cbc4;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.fee-row.rebate .fee-amount {
+  color: #388e3c;
+  font-weight: 600;
+}
+
+.fee-label {
+  font-weight: 500;
+  color: #004d40;
+}
+
+.fee-amount {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #00796b;
+}
+
+.fee-amount.highlight {
+  color: #004d40;
+  font-size: 1.3rem;
+  background: #80cbc4;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.pricing-note {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid #80cbc4;
+}
+
+.pricing-note p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.pricing-note strong {
+  color: #004d40;
+}
+
+/* Mobile responsive for fees */
+@media (max-width: 768px) {
+  .pricing-card {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .fee-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.25rem;
+  }
+  
+  .fee-amount.highlight {
+    margin-top: 0.5rem;
+  }
+}
+
 /* Booking (index) */
 .booking { text-align: center; }
 
